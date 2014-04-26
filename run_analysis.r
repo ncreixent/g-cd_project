@@ -71,6 +71,6 @@ tidy_dataset <- dcast(tidy_dataset,Activity + Subject_ID ~ variable,mean)
 
 for (i in 3:ncol(tidy_dataset)){colnames(tidy_dataset)[i] <- (paste("mean(",colnames(tidy_dataset)[i],")",sep = ""))}
 
-write.table(tidy_dataset,"tidy_dataset.txt")
+write.table(tidy_dataset,"tidy_dataset.txt", sep="\t", row.names = FALSE)
 
 ## WE ARE DONE! Please find the tidy data set in the file "tidy_dataset.txt" available at your WD.
